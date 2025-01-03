@@ -1,0 +1,36 @@
+<nav class="bg-blue-600 text-white w-full sticky top-0 z-10">
+    <div class="container  mx-auto flex items-center flex-row px-4 py-2">
+      <!-- Logo -->
+      <a href="#" class="md:text-xl  font-bold basis-1/6">ArmandoCostantino</a>
+  
+      <!-- Menu per dispositivi desktop -->
+    <div class="basis-4/6 md:flex flex-row justify-center">
+      <ul class="hidden md:flex  space-x-6">
+        <li><a routerLink="/home" routerLinkActive="active" class="hover:text-gray-300">Home</a></li>
+        <li><a routerLink="/chi-sono" routerLinkActive="active" class="hover:text-gray-300">Chi sono</a></li>
+        <li><a routerLink="/giro-del-mondo" routerLinkActive="active" class="hover:text-gray-300">Giro del mondo</a></li>
+        <li><a routerLink="/sostienimi" routerLinkActive="active" class="hover:text-gray-300">Sostienimi</a></li>
+      </ul>
+    </div>
+  
+      <!-- Pulsante del menu hamburger -->
+      <button
+        (click)="toggleMobileMenu()"
+        class="block md:hidden text-white focus:outline-none "
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+  
+    <!-- Menu mobile -->
+    <div *ngIf="isMobileMenuOpen" class="md:hidden bg-blue-700">
+      <ul class="flex flex-col space-y-2 p-4">
+        <li><a href="#" class="hover:text-gray-300">Home</a></li>
+        <li><a href="#" class="hover:text-gray-300">About</a></li>
+        <li><a class="hover:text-gray-300" routerLink="/giro-del-mondo">giro del mondo</a></li>
+        <li><a href="#" class="hover:text-gray-300">Contact</a></li>
+      </ul>
+    </div>
+  </nav>

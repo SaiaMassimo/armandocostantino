@@ -1,0 +1,12 @@
+/* Rimuovi lo spazio laterale durante lo scrolling */
+html, body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth; /* Per browser che supportano lo scroll nativo */
+  }
+  
+  /* Per garantire che la sezione 1 sia ben visibile */
+  section {
+    background-size: cover;
+    background-position: center;
+  }
