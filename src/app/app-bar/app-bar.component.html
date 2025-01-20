@@ -27,10 +27,10 @@
     <!-- Menu mobile -->
     <div *ngIf="isMobileMenuOpen" class="md:hidden bg-blue-700">
       <ul class="flex flex-col space-y-2 p-4">
-        <li><a routerLink="/home" routerLinkActive="active" class="hover:text-gray-300">Home</a></li>
-        <li><a routerLink="/chi-sono" routerLinkActive="active" class="hover:text-gray-300">Chi sono</a></li>
-        <li><a routerLink="/giro-del-mondo" routerLinkActive="active" class="hover:text-gray-300">Giro del mondo</a></li>
-        <li><a routerLink="/sostienimi" routerLinkActive="active" class="hover:text-gray-300">Sostienimi</a></li>
+        <li><a routerLink="/home" routerLinkActive="active" class="hover:text-gray-300" (click)="toggleMobileMenu()">Home</a></li>
+        <li><a routerLink="/chi-sono" routerLinkActive="active" class="hover:text-gray-300" (click)="toggleMobileMenu()">Chi sono</a></li>
+        <li><a routerLink="/giro-del-mondo" routerLinkActive="active" class="hover:text-gray-300" (click)="toggleMobileMenu()">Giro del mondo</a></li>
+        <li><a routerLink="/sostienimi" routerLinkActive="active" class="hover:text-gray-300" (click)="toggleMobileMenu()">Sostienimi</a></li>
       </ul>
     </div>
   </nav>
